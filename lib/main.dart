@@ -6,6 +6,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:music/core/config/theme.dart';
 import 'package:music/data/service/local/local_db_service.dart';
 import 'package:music/routes/router.dart';
+import 'package:music/view/screens/home/cubit/exchange_cubit.dart';
 import 'package:music/view/screens/home/cubit/home_cubit.dart';
 
 void main() async {
@@ -19,6 +20,7 @@ void main() async {
   runApp(
       // Initialize BLOC IN MAIN
       MultiBlocProvider(providers: [
+    BlocProvider(create: (context) => ExchangeCubit()),
     BlocProvider(create: (context) => HomeCubit()),
   ], child: MyApp()));
 }

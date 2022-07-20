@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music/core/config/theme.dart';
 import 'package:music/data/service/global/get_service.dart';
+import 'package:music/view/screens/home/view/exchange_page.dart';
 import 'package:music/view/screens/home/view/home_page.dart';
 import 'package:music/view/widgets/headline_one_text_widget.dart';
 import 'package:music/view/widgets/standart_padding_widget.dart';
@@ -15,7 +16,7 @@ class MainPage extends StatefulWidget {
 
 class _HomePageState extends State<MainPage> {
   int _currentIndex = 0;
-  List<Widget> _screens = [HomePage(), Scaffold()];
+  List<Widget> _screens = [HomePage(), ExchangeApp()];
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
