@@ -1,3 +1,8 @@
+import 'package:hive/hive.dart';
+
+part 'currency_model.g.dart';
+
+@HiveType(typeId: 0)
 class CurrencyModel {
   CurrencyModel({
     this.title,
@@ -8,11 +13,17 @@ class CurrencyModel {
     this.date,
   });
 
+  @HiveField(0)
   String? title;
+  @HiveField(1)
   String? code;
+  @HiveField(2)
   String? cbPrice;
+  @HiveField(3)
   String? nbuBuyPrice;
+  @HiveField(4)
   String? nbuCellPrice;
+  @HiveField(5)
   Date? date;
 
   factory CurrencyModel.fromJson(Map<String, dynamic> json) => CurrencyModel(
